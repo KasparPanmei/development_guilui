@@ -49,7 +49,7 @@ export function SiteHeader({ theme = "light", onToggleTheme = () => {} }) {
             </Link>
             <Link
               className="contact-social"
-              to="https://www.instagram.com/guilui_panmei?utm_source=ig_web_button_share_sheet&cnvx=ZDNlZDc0MzIxNw=="
+              to="https://www.instagram.com/guilui_panmei"
               target="_blank"
               rel="noreferrer"
             >

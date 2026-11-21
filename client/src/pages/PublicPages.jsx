@@ -262,7 +262,11 @@ export function PackagesPage() {
             </p>
           </div>
         </div>
-        <Reveal as="section" eyebrow="AT A GLANCE" title="Compare what is included">
+        <Reveal
+          as="section"
+          eyebrow="AT A GLANCE"
+          title="Compare what is included"
+        >
           <div className="comparison-wrap">
             <table className="comparison-table">
               <thead>
@@ -1107,14 +1111,14 @@ export function ContactPage() {
             <div className="contact-social">
               <span>FOLLOW ALONG</span>
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@GuiluiPanmei"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Youtube size={17} /> YouTube
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/guilui_panmei"
                 target="_blank"
                 rel="noreferrer"
               >
