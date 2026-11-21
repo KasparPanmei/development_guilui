@@ -72,14 +72,14 @@ export function SiteHeader({ theme = "light", onToggleTheme = () => {} }) {
             {/* <Link className="profile-link" to="/login" aria-label="Account">
               <UserRound size={17} />
             </Link> */}
-            <button
+            {/* <button
               className="menu-toggle"
               aria-label={open ? "Close navigation" : "Open navigation"}
               aria-expanded={open}
               onClick={() => setOpen(!open)}
             >
               {open ? <X /> : <Menu />}
-            </button>
+            </button> */}
           </div>
         </div>
         {open && (
