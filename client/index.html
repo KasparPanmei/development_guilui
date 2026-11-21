@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A2E" />
+    <meta
+      name="description"
+      content="GUILUI PANMEI — Beyond Limits. Built by me. For you. For society."
+    />
+    <meta property="og:title" content="GUILUI PANMEI — Beyond Limits" />
+    <meta
+      property="og:description"
+      content="A founder-led learning experience focused on social skills, confidence and communication."
+    />
+    <meta property="og:type" content="website" />
+    <script>
+      try {
+        const t = localStorage.getItem("gp-theme");
+        document.documentElement.dataset.theme =
+          t ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/aida-public/AB6AXuCiDmoGgTjErrrR9vgSoL1SFVOIc3lfrP0wyU-clkfGcYbKVcfkBKJAWJuuoi5DTiy50R9LNy79PWnSCHxt0-qItXScfcrRMAB2iVr8PERDTPONA1Di9keG4BSCkrm8YkaOZhgvDE7idp5oQ0LSu6UaO259YeSP7qZ6ffH6Rb53wUVjWc1bdQGP5tt4RJicP-qgakUE1v2ELim2BbM2MEDWK2OMiPn7UPi3xIxJJawfJrVCo_Qe6wPQ"
+      type="image/x-icon"
+    />
+    <title>GUILUI PANMEI — Beyond Limits</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
