@@ -45,9 +45,7 @@ export default function Home() {
             <em>Beyond Limits.</em>
           </h1>
           <p>
-            I'm building something bigger than content. A 6-hour intensive to
-            transform how you speak, connect and show up. Built by me. For you.
-            For society.
+            I'm building something bigger than content.
           </p>
           <div className="hero-actions">
             <a
@@ -121,7 +119,7 @@ export default function Home() {
             </Link> */}
           </div>
         </div>
-        <div className="container pillars-grid">
+        {/* <div className="container pillars-grid">
           {pillars.map(([title, desc], i) => (
             <FeatureCard
               key={title}
@@ -131,7 +129,7 @@ export default function Home() {
               {desc}
             </FeatureCard>
           ))}
-        </div>
+        </div> */}
       </Reveal>
 
       <Reveal as="section" className="section contact-teaser">
