@@ -218,14 +218,16 @@ select:focus-visible {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex: 0 0 auto;
+  white-space: nowrap;
   font-family: var(--serif);
   font-size: 16px;
   letter-spacing: 0.13em;
-  white-space: nowrap;
 }
 .brand-image {
   height: 60px;
   width: 60px;
+  flex: 0 0 auto;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 8px #26262666;
@@ -233,6 +235,7 @@ select:focus-visible {
 .brand-mark {
   width: 34px;
   height: 34px;
+  flex: 0 0 auto;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -245,9 +248,16 @@ select:focus-visible {
 .desktop-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 27px;
+  min-width: 0;
 }
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  white-space: nowrap;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.07em;
@@ -277,9 +287,16 @@ select:focus-visible {
 .nav-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
   gap: 13px;
 }
 .login-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  white-space: nowrap;
   border: 1px solid #f2ca50;
   border-radius: 30px;
   padding: 9px 22px;
@@ -294,6 +311,7 @@ select:focus-visible {
 .profile-link {
   width: 32px;
   height: 32px;
+  flex: 0 0 auto;
   border-radius: 50%;
   background: #f2ca50;
   color: var(--navy);
@@ -321,6 +339,7 @@ select:focus-visible {
 .hero-video {
   position: absolute;
   inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -328,28 +347,18 @@ select:focus-visible {
   opacity: 1;
   pointer-events: none;
 }
-/* .hero-image:after {
-  content: "";
-  position: absolute;
-  right: 8%;
-  top: 12%;
-  width: 34vw;
-  height: 78%;
-  border-radius: 48% 48% 12px 12px;
-  background: linear-gradient(145deg, #b9a27c55, #fff5);
-  filter: blur(1px);
-  opacity: 0.65;
-} */
 .hero-scrim {
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background:
     linear-gradient(90deg, #a2a1a1 0%, #faf8f5ed 28%, #faf8f580 100%),
     linear-gradient(0deg, #faf8f5 0%, transparent 26%);
 }
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(1360px, calc(100% - 48px));
   margin: auto;
   padding: 100px 0 130px;
@@ -442,6 +451,7 @@ h2 em,
 }
 .hero-scroll {
   position: absolute;
+  z-index: 2;
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
@@ -976,38 +986,58 @@ h2 em,
   .nav-inner {
     width: calc(100% - 36px);
   }
-  /* .desktop-nav {
-    display: none;
-  } */
+
+  /* Keep desktop-nav / social links centered with independent sizing and no text/outline */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
   .desktop-nav .contact-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
     font-size: 0;
     line-height: 0;
-    gap: 0;
-    outline: none;
-    outline-offset: 0;
-  }
-
-  .desktop-nav .contact-social a,
-  .desktop-nav .contact-social a:focus,
-  .desktop-nav .contact-social a:focus-visible {
-    padding: 0;
+    gap: 8px;
+    padding-top: 0;
     outline: none;
     outline-offset: 0;
     box-shadow: none;
   }
-
-  .desktop-nav .contact-social svg {
-    width: 25px;
-    height: 25px;
+  .desktop-nav .contact-social a,
+  .desktop-nav .contact-social a:focus,
+  .desktop-nav .contact-social a:focus-visible {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
     outline: none;
-    display: block;
+    outline-offset: 0;
+    box-shadow: none;
   }
+  .desktop-nav .contact-social svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    display: block;
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* Hamburger / mobile menu commented out on small screens */
   /* .menu-toggle {
     display: grid;
     place-items: center;
-  }
-  .profile-link {
-    display: none;
   }
   .mobile-nav {
     display: flex;
@@ -1034,14 +1064,22 @@ h2 em,
   .mobile-nav {
     display: none;
   }
+
+  /* Keep social links, login, and dark-mode controls aligned and visible */
   .nav-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
     gap: 10px;
+  }
+  .nav-actions > * {
+    flex: 0 0 auto;
   }
   .profile-link {
     display: none;
   }
+
   .hero {
     min-height: 690px;
   }
@@ -1805,11 +1843,12 @@ h2 em,
   cursor: pointer;
 }
 .contact-social {
-  /* border-top: 1px solid var(--line); */
   padding-top: 18px;
-  display: flex;
-  gap: 16px;
-  align-items: start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .contact-social > span {
@@ -1820,9 +1859,11 @@ h2 em,
   font-weight: 800;
 }
 .contact-social a {
-  display: flex;
+  display: inline-flex;
+  flex: 0 0 auto;
   gap: 6px;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
   color: var(--muted);
 }
@@ -1919,6 +1960,7 @@ h2 em,
 .theme-toggle {
   width: 34px;
   height: 34px;
+  flex: 0 0 auto;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1952,13 +1994,13 @@ h2 em,
 :root[data-theme="dark"] .hero {
   background: #101027;
 }
-:root[data-theme="dark"] .hero-image {
-  opacity: 0.34;
+:root[data-theme="dark"] .hero-video {
+  opacity: 0.45;
 }
 :root[data-theme="dark"] .hero-scrim {
   background:
-    linear-gradient(90deg, #1f1f3bf5 0%, #101027e8 18%, #101027a8 0%),
-    linear-gradient(0deg, #101027 0%, transparent 6%);
+    linear-gradient(90deg, #1f1f3bf5 0%, #101027e8 18%, #101027a8 100%),
+    linear-gradient(0deg, #101027 0%, transparent 18%);
 }
 :root[data-theme="dark"] .hero h1,
 :root[data-theme="dark"] .page-intro h1,
