@@ -21,8 +21,7 @@
    GUILUI PANMEI — THEME TOKENS
 ========================================= */
 
-:root,
-[data-theme="light"] {
+:root {
   color-scheme: light;
 
   --page-bg: #faf8f5;
@@ -50,7 +49,7 @@
   --footer-border: rgba(255, 255, 255, 0.14);
 }
 
-[data-theme="dark"] {
+:root {
   color-scheme: dark;
 
   --page-bg: #0d0d20;
@@ -1976,7 +1975,7 @@ h2 em,
   outline: 2px solid #e8cc6e;
   outline-offset: 3px;
 }
-:root[data-theme="dark"] {
+:root:root {
   color-scheme: dark;
   --ivory: #101027;
   --navy: #eae7f2;
@@ -1987,156 +1986,156 @@ h2 em,
   --muted: #c2bed0;
   --gold-dark: #d4af37;
 }
-:root[data-theme="dark"] body {
+:root body {
   background: #101027;
   color: #eae7f2;
 }
-:root[data-theme="dark"] .hero {
+:root .hero {
   background: #101027;
 }
-:root[data-theme="dark"] .hero-video {
-  opacity: 0.45;
+:root .hero-video {
+  opacity: 1;
 }
-:root[data-theme="dark"] .hero-scrim {
+:root .hero-scrim {
   background:
-    linear-gradient(90deg, #1f1f3bf5 0%, #101027e8 18%, #101027a8 100%),
-    linear-gradient(0deg, #101027 0%, transparent 18%);
+    linear-gradient(90deg, #1f1f3bf5 0%, #101027e8 0%, #101027a8 0%),
+    linear-gradient(0deg, #101027 0%, transparent 0%);
 }
-:root[data-theme="dark"] .hero h1,
-:root[data-theme="dark"] .page-intro h1,
-:root[data-theme="dark"] .public-hero h1,
-:root[data-theme="dark"] .story-copy h2,
-:root[data-theme="dark"] .section-heading h2,
-:root[data-theme="dark"] .affiliate-grid h2,
-:root[data-theme="dark"] .contact-row h2,
-:root[data-theme="dark"] .contact-row p,
-:root[data-theme="dark"] .public-section-heading h2,
-:root[data-theme="dark"] .about-copy h2,
-:root[data-theme="dark"] .legal-article h1,
-:root[data-theme="dark"] .legal-article h2,
-:root[data-theme="dark"] .legal-article h3 {
+:root .hero h1,
+:root .page-intro h1,
+:root .public-hero h1,
+:root .story-copy h2,
+:root .section-heading h2,
+:root .affiliate-grid h2,
+:root .contact-row h2,
+:root .contact-row p,
+:root .public-section-heading h2,
+:root .about-copy h2,
+:root .legal-article h1,
+:root .legal-article h2,
+:root .legal-article h3 {
   color: #f0edf7;
 }
 
-:root[data-theme="dark"] .hero-content > p,
-:root[data-theme="dark"] .hero-note,
-:root[data-theme="dark"] .public-hero > p,
-:root[data-theme="dark"] .story-copy p,
-:root[data-theme="dark"] .section-heading p,
-:root[data-theme="dark"] .about-copy p,
-:root[data-theme="dark"] .legal-article p {
+:root .hero-content > p,
+:root .hero-note,
+:root .public-hero > p,
+:root .story-copy p,
+:root .section-heading p,
+:root .about-copy p,
+:root .legal-article p {
   color: #c2bed0;
 }
-:root[data-theme="dark"] .stats-strip,
-:root[data-theme="dark"] .package-section,
-:root[data-theme="dark"] .affiliate-section,
-:root[data-theme="dark"] .public-page,
-:root[data-theme="dark"] .portal-page {
+:root .stats-strip,
+:root .package-section,
+:root .affiliate-section,
+:root .public-page,
+:root .portal-page {
   background: #101027;
   border-color: #353552;
 }
-:root[data-theme="dark"] .stats-grid article,
-:root[data-theme="dark"] .feature-card,
-:root[data-theme="dark"] .package-card,
-:root[data-theme="dark"] .public-package-card,
-:root[data-theme="dark"] .principle-card,
-:root[data-theme="dark"] .session-card,
-:root[data-theme="dark"] .upgrade-card,
-:root[data-theme="dark"] .unlock-steps > div,
-:root[data-theme="dark"] .rules-grid article,
-:root[data-theme="dark"] .comparison-wrap,
-:root[data-theme="dark"] .contact-form-panel,
-:root[data-theme="dark"] .contact-side,
-:root[data-theme="dark"] .content-panel {
+:root .stats-grid article,
+:root .feature-card,
+:root .package-card,
+:root .public-package-card,
+:root .principle-card,
+:root .session-card,
+:root .upgrade-card,
+:root .unlock-steps > div,
+:root .rules-grid article,
+:root .comparison-wrap,
+:root .contact-form-panel,
+:root .contact-side,
+:root .content-panel {
   background: #191936;
   border-color: #353552;
   color: #eae7f2;
 }
-:root[data-theme="dark"] .stats-grid span,
-:root[data-theme="dark"] .feature-card p,
-:root[data-theme="dark"] .package-card p,
-:root[data-theme="dark"] .package-card li,
-:root[data-theme="dark"] .public-package-card li,
-:root[data-theme="dark"] .principle-card p,
-:root[data-theme="dark"] .session-card p,
-:root[data-theme="dark"] .upgrade-card span,
-:root[data-theme="dark"] .rules-grid p,
-:root[data-theme="dark"] .section-lead,
-:root[data-theme="dark"] .faq-item p,
-:root[data-theme="dark"] .legal-toc a,
-:root[data-theme="dark"] .contact-side p {
+:root .stats-grid span,
+:root .feature-card p,
+:root .package-card p,
+:root .package-card li,
+:root .public-package-card li,
+:root .principle-card p,
+:root .session-card p,
+:root .upgrade-card span,
+:root .rules-grid p,
+:root .section-lead,
+:root .faq-item p,
+:root .legal-toc a,
+:root .contact-side p {
   color: #c2bed0;
 }
-:root[data-theme="dark"] .package-card h3,
-:root[data-theme="dark"] .package-card-top h3,
-:root[data-theme="dark"] .session-card h3,
-:root[data-theme="dark"] .principle-card h3,
-:root[data-theme="dark"] .rules-grid h3,
-:root[data-theme="dark"] .founding-note strong,
-:root[data-theme="dark"] .affiliate-principle strong,
-:root[data-theme="dark"] .break-explainer strong {
+:root .package-card h3,
+:root .package-card-top h3,
+:root .session-card h3,
+:root .principle-card h3,
+:root .rules-grid h3,
+:root .founding-note strong,
+:root .affiliate-principle strong,
+:root .break-explainer strong {
   color: #f0edf7;
 }
-:root[data-theme="dark"] .course-band,
-:root[data-theme="dark"] .course-overview-band,
-:root[data-theme="dark"] .prime-price {
+:root .course-band,
+:root .course-overview-band,
+:root .prime-price {
   background: #05051a;
   border-color: #353552;
 }
-:root[data-theme="dark"] .founding-note,
-:root[data-theme="dark"] .affiliate-principle,
-:root[data-theme="dark"] .break-explainer,
-:root[data-theme="dark"] .course-metrics,
-:root[data-theme="dark"] .mandatory-disclaimer,
-:root[data-theme="dark"] .legal-draft-note {
+:root .founding-note,
+:root .affiliate-principle,
+:root .break-explainer,
+:root .course-metrics,
+:root .mandatory-disclaimer,
+:root .legal-draft-note {
   background: #1c1c3a;
   border-color: #353552;
 }
-:root[data-theme="dark"] .comparison-table th {
+:root .comparison-table th {
   background: #222244;
   color: #f0edf7;
 }
-:root[data-theme="dark"] .comparison-table td {
+:root .comparison-table td {
   border-color: #353552;
   color: #c2bed0;
 }
-:root[data-theme="dark"] .comparison-table td:first-child {
+:root .comparison-table td:first-child {
   color: #f0edf7;
 }
-:root[data-theme="dark"] .contact-form-panel input,
-:root[data-theme="dark"] .contact-form-panel textarea,
-:root[data-theme="dark"] .contact-form-panel select,
-:root[data-theme="dark"] .form-grid input,
-:root[data-theme="dark"] .form-grid textarea,
-:root[data-theme="dark"] .form-grid select {
+:root .contact-form-panel input,
+:root .contact-form-panel textarea,
+:root .contact-form-panel select,
+:root .form-grid input,
+:root .form-grid textarea,
+:root .form-grid select {
   background: #101027;
   border-color: #454563;
   color: #f0edf7;
 }
-:root[data-theme="dark"] .copy-email {
+:root .copy-email {
   background: #101027;
   border-color: #454563;
   color: #f0edf7;
 }
-:root[data-theme="dark"] .founder-art,
-:root[data-theme="dark"] .founder-art img {
+:root .founder-art,
+:root .founder-art img {
   background: #f0edf7;
 }
-:root[data-theme="dark"] .button-secondary {
+:root .button-secondary {
   background: #191936;
   color: #e8cc6e;
   border-color: #d4af3780;
 }
-:root[data-theme="dark"] .text-link,
-:root[data-theme="dark"] .legal-article a {
+:root .text-link,
+:root .legal-article a {
   color: #e8cc6e;
 }
-:root[data-theme="dark"] .public-section,
-:root[data-theme="dark"] .legal-toc,
-:root[data-theme="dark"] .faq-item {
+:root .public-section,
+:root .legal-toc,
+:root .faq-item {
   border-color: #353552;
 }
-:root[data-theme="dark"] .not-found {
+:root .not-found {
   background: #05051a;
 }
 @media (max-width: 800px) {
@@ -2157,11 +2156,11 @@ h2 em,
 .account-coming-soon strong {
   color: var(--navy);
 }
-:root[data-theme="dark"] .account-coming-soon {
+:root .account-coming-soon {
   background: #1c1c3a;
   border-color: #353552;
 }
-:root[data-theme="dark"] .account-coming-soon strong {
+:root .account-coming-soon strong {
   color: #f0edf7;
 }
 
@@ -2181,4 +2180,71 @@ h2 em,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* =========================================
+   PERMANENT DARK MODE — NO THEME SWITCH
+========================================= */
+:root {
+  color-scheme: dark;
+  --page-bg: #101027;
+  --surface: #191936;
+  --surface-soft: #1c1c3a;
+  --surface-raised: #252540;
+  --text-primary: #f0edf7;
+  --text-secondary: #c2bed0;
+  --text-muted: #aaa7bc;
+  --border-color: #353552;
+  --accent: #d4af37;
+  --accent-hover: #e8cc6e;
+  --accent-soft: #393047;
+  --input-bg: #101027;
+  --input-text: #f0edf7;
+  --placeholder: #aaa7bc;
+  --ivory: #101027;
+  --navy: #eae7f2;
+  --navy-deep: #05051a;
+  --sand: #171733;
+  --sand2: #1c1c3a;
+  --line: #353552;
+  --muted: #c2bed0;
+}
+
+html,
+body,
+#root {
+  color-scheme: dark;
+  background-color: #101027;
+}
+
+.theme-toggle {
+  display: none !important;
+}
+
+/* Center the background video and let more of it show through. */
+.hero-video {
+  object-position: center center;
+  opacity: 0.72;
+}
+
+/* Stronger navy scrim: readable text with a clearly visible centered video. */
+.hero-scrim {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 13, 32, 0.94) 0%,
+      rgba(13, 13, 32, 0.84) 42%,
+      rgba(13, 13, 32, 0.72) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(13, 13, 32, 0.88) 0%,
+      rgba(13, 13, 32, 0.12) 48%,
+      rgba(13, 13, 32, 0.35) 100%
+    );
+}
+
+/* Prevent any remaining light-theme attribute from changing the page. */
+:root[data-theme="light"] {
+  color-scheme: dark;
 }
